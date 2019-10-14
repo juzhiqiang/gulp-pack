@@ -15,7 +15,7 @@ gulpfile 必须放根目录下，是gulp运行的必须代码
 | css   | css文件输入路径  | ./dist/css/ |
 | js    | js文件输入路径   | ./dist/js/ |
 | image | image文件输入路径 | ./dist/image/ |
-
+#### 示例
 ```js
   const config= {
     origin:{
