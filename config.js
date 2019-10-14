@@ -3,7 +3,7 @@
  * @Email: 3027704690@qq.com
  * @Date: 2019-10-14 14:03:37
  * @LastEditors: null
- * @LastEditTime: 2019-10-14 16:11:51
+ * @LastEditTime: 2019-10-14 16:13:25
  * @Description: gulp-pack 配置文件
  *  origin 需处理文件起始地点 
  *     |----  css        css文件存放地址      默认 ./src/css/**\/*.css
@@ -19,8 +19,6 @@
     origin:{},
     dest:{}
  };
-
- 'test'
 
 
  module.exports = config;
