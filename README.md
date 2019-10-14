@@ -34,6 +34,7 @@ gulpfile 必须放根目录下，是gulp运行的必须代码
 | gulp minCss | 启动css压缩 |
 | gulp minImg | 启动图片压缩 |
 | gulp minJs  | 启动js转译压缩混淆 |
+| gulp watch  | 监听文件【js,css,image】变化，文件变化后自动更新压缩 |
 
 
 ## test 
