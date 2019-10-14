@@ -2,19 +2,20 @@
  * @Author: jzq
  * @Date: 2019-09-09 20:51:22
  * @LastEditors: null
- * @LastEditTime: 2019-09-10 09:21:23
+ * @LastEditTime: 2019-10-14 15:24:43
  * @Description: file content
  */
 const {
     dest,
     src,
-    rename
+    rename,
+    jsPath
 } = require('./common');
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel')
 
 function minJs() {
-    return src('./src/js/**/*.js', {
+    return src(jsPath.src, {
             sourcemaps: true
         })
         .pipe(babel({
@@ -24,7 +25,7 @@ function minJs() {
         .pipe(rename({
             suffix: ".min"
         }))
-        .pipe(dest('./dist/js',{sourcemaps:'.'}))
+        .pipe(dest(jsPath.dest,{sourcemaps:'.'}))
 }
 
 module.exports = minJs;

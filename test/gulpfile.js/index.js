@@ -2,7 +2,7 @@
  * @Author: jzq
  * @Date: 2019-09-09 20:50:21
  * @LastEditors: null
- * @LastEditTime: 2019-09-10 09:21:46
+ * @LastEditTime: 2019-10-14 15:23:37
  * @Description: file content
  */
 const {watch,series} = require('gulp');
@@ -15,6 +15,12 @@ function a(cb){
 }
 
 
-watch('./src/**', series(minCss, minJs,minImg));
+const watchs = ()=>{
+    watch('./src/**', series(minCss, minJs,minImg));
+};
 
+exports.watchs = watchs;
+exports.minCss = series(minCss);
+exports.minJs = series(minJs);
+exports.minImg = series(minImg);
 exports.build = series(minCss, minJs,minImg);
