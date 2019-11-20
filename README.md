@@ -15,6 +15,9 @@ gulpfile 必须放根目录下，是gulp运行的必须代码
 | css   | css文件输入路径  | ./dist/css/ |
 | js    | js文件输入路径   | ./dist/js/ |
 | image | image文件输入路径 | ./dist/image/ |
+| concat| 合并文件         |            |
+|css    |  字符串【存在则为文件名】不存在不启动合并| "" |
+|JS     |  字符串【存在则为文件名】不存在不启动合并| "" |
 #### 示例
 ```js
   const config= {
@@ -23,6 +26,9 @@ gulpfile 必须放根目录下，是gulp运行的必须代码
     },
     dest:{
        css: './condense/css/'
+    },
+    concat: {
+      css: ""
     }
  }
 ```

@@ -3,7 +3,7 @@
  * @Email: 3027704690@qq.com
  * @Date: 2019-10-14 14:03:37
  * @LastEditors: null
- * @LastEditTime: 2019-10-14 15:23:14
+ * @LastEditTime: 2019-11-20 17:47:12
  * @Description: gulp-pack 配置文件
  *  origin 需处理文件起始地点 
  *     |----  css        css文件存放地址      默认 ./src/css/**\/*.css
@@ -13,12 +13,18 @@
  *     |----  css        css文件输出地址 
  *     |----  js         js文件输出地址  
  *     |----  image      js文件输出地址  
+ *  concat  合并文件          
+ *     |----  css        合并css文件      默认为空时，将关闭合并文件功能，出现输出文件名时输出为该文件名
+ *     |----  js         合并js文件       默认为空时，将关闭合并文件功能
  */
 
- const config= {
-    origin:{},
-    dest:{}
- }
+const config = {
+   origin: {},
+   dest: {},
+   concat: {
+      css: ""
+   }
+};
 
 
- module.exports = config;
+module.exports = config;
