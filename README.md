@@ -18,6 +18,11 @@ gulpfile 必须放根目录下，是gulp运行的必须代码
 | concat| 合并文件         |            |
 |css    |  字符串【存在则为文件名】不存在不启动合并| "" |
 |JS     |  字符串【存在则为文件名】不存在不启动合并| "" |
+| inject|  注入文件 支持JS |             |
+|   src |  需要注入的文件  |   "" 默认为空不注入 |
+| insert|   注入位置       | `before(默认) | after`  |
+
+
 #### 示例
 ```js
   const config= {
@@ -29,6 +34,10 @@ gulpfile 必须放根目录下，是gulp运行的必须代码
     },
     concat: {
       css: ""
+    },
+    inject:{
+      src:"",
+      insert : "before"
     }
  }
 ```
@@ -40,6 +49,7 @@ gulpfile 必须放根目录下，是gulp运行的必须代码
 | gulp minCss | 启动css压缩 |
 | gulp minImg | 启动图片压缩 |
 | gulp minJs  | 启动js转译压缩混淆 |
+| gulp injectJS  | 启动js转译压缩混淆 |
 | gulp watch  | 监听文件【js,css,image】变化，文件变化后自动更新压缩 |
 
 
@@ -47,8 +57,12 @@ gulpfile 必须放根目录下，是gulp运行的必须代码
  test是测试文件夹 直接 `npm insatll` 即可下载依赖
 
 ## 更新日志
-### v 0.1.1
+### v 0.1.2  新增 js文件注入
 ##### 2019-12-21
+* 支持 js文件注入
+
+### v 0.1.1
+##### 2019-12-20
 * 支持 js/css 合并文件
 
 ### v 0.1.0 gulp-pack 上线 

@@ -2,7 +2,7 @@
  * @Author: jzq
  * @Date: 2019-09-09 20:50:42
  * @LastEditors: null
- * @LastEditTime: 2019-11-20 18:04:34
+ * @LastEditTime: 2019-11-21 11:37:52
  * @Description: file content
  */
 const {
@@ -17,6 +17,8 @@ const imports = config.origin;
 //出口
 const dests = config.dest;
 const concats = config.concat;
+const inject = config.inject;
+if(!inject.src) throw Error('place input inject src');
 
 const cssPath = {
     src: imports.css ? imports.css : './src/css/**/*.css',
@@ -27,6 +29,7 @@ const jsPath = {
     src: imports.js ? imports.js : './src/js/**/*.js',
     dest: dests.js ? dests.js : './dist/js/',
     concatName: concats.js ? concats.js : false ,
+    injects: inject.src ? inject : '' 
 }
 const imagePath = {
     src: imports.iamge ? imports.iamge : './src/image/**',
